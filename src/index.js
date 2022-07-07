@@ -27,19 +27,19 @@ function takeName() {
         }
 
 
-    fetchCountries(countryName.trim()).then(data => {
+    fetchCountries(countryName.trim()).then(countries => {
         
  
-        if (data.length > 10) {
+        if (countries.length > 10) {
            
             Notiflix.Notify.info('Too many matches found. Please enter a more specific name.');
   
             return
 
         }
-            else if (data.length > 2 && data.length < 10) {
+            else if (countries.length > 2 && countries.length < 10) {
             countryInfo.innerHTML = '';
-          countryList.innerHTML =   makeMarkupList(data);
+          countryList.innerHTML =   makeMarkupList(countries);
               
   
     
@@ -47,10 +47,10 @@ function takeName() {
    
             
         }
-           else if (data.length === 1) {
+           else if (countries.length === 1) {
    
             countryList.innerHTML = '';
-            countryInfo.innerHTML =makeMarkupInfoCountry(data);
+            countryInfo.innerHTML =makeMarkupInfoCountry(countries);
   
              
  }
@@ -74,9 +74,9 @@ function takeName() {
     
 }
 
-function makeMarkupList(elements) {
+function makeMarkupList(countries) {
 
-    return elements.map(element => {
+    return countries.map(element => {
         return `
     <li class='items-country' ><img src="${element.flags.svg}"  width="40px" height="40px" alt="Name Country"> ${element.name.official} </li>
       
@@ -85,9 +85,9 @@ function makeMarkupList(elements) {
     `
     }).join('');
 };
-function makeMarkupInfoCountry(elements) {
+function makeMarkupInfoCountry(countries) {
    
-    return elements.map(element => {
+    return countries.map(element => {
          const languages = Object.values(element.languages);
 
         return ` 

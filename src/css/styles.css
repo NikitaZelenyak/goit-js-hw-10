@@ -23,10 +23,11 @@ li{
 }
 .country-title{
   display: flex;
-  align-items: center;
+align-items: center;
 
 }
 .items-country{
     display: flex;
       align-items: center;  
+      margin-bottom: 10px;
 }

@@ -99,9 +99,9 @@ function makeMarkupInfoCountry(elements) {
         height="80px"
       />${element.name.official}</h2>
       <ul>
-        <li>Capital:<span>${element.capital}.</span></li>
-        <li>Population:<span>${element.population}.</span></li>
-        <li>Languages:<span>${languages}.</span></li>
+        <li>Capital: <span>${element.capital}.</span></li>
+        <li>Population: <span>${element.population}.</span></li>
+        <li>Languages: <span>${languages}.</span></li>
       </ul>
   `
     }).join('');

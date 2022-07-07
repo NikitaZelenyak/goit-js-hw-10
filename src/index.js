@@ -9,54 +9,7 @@ const countryInfo = document.querySelector('.country-info');
 input.addEventListener('input',debounce(takeName,DEBOUNCE_DELAY) )
 
 
-// function takeName() {
-   
-//     const countryName = input.value
-    
-//     if (countryName === '') {
-        
-  
-//         countryList.innerHTML = '';
-  
-//         countryInfo.innerHTML = '';
-            
 
-//         }
-
-
-//          fetchCountries(countryName.trim()).then(data => data.forEach(element => {
-    
-//              if (data.length > 10) {
-//      Notiflix.Notify.info('Cogito ergo sum');
-//     return
-//              }
-//              else if (data.length > 2 && data.length < 10) {
-    
-//     makeMarkupList(element);
-// }
-
-//              else if (data.length === 1) {
-    
-   
-//                  if (isActive) {
-//         return
-   
-//                  }
-   
-//                  countryList.innerHTML = ''
-   
-//                  makeMarkupInfoCountry(element);
-   
-//                  isActive = true 
-//  }
- 
-
-       
-//     }));
- 
-
-    
-// }
 
 function takeName() {
 
